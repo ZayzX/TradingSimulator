@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Trading</h1>
+        <button id="openModalBtn">Paramètre</button>
+        <div>
+            <label for="company">Choisir une entreprise :</label>
+            <select id="company" onchange="selectCompany()">
+                <option value="0">Entreprise 1 (Prix: $10)</option>
+                <option value="1">Entreprise 2 (Prix: $20)</option>
+                <option value="2">Entreprise 3 (Prix: $30)</option>
+                <option value="3">Entreprise 4 (Prix: $40)</option>
+                <option value="4">Entreprise 5 (Prix: $50)</option>
+                <option value="5">Entreprise 6 (Prix: $60)</option>
+                <option value="6">Entreprise 7 (Prix: $70)</option>
+                <option value="7">Entreprise 8 (Prix: $80)</option>
+                <option value="8">Entreprise 9 (Prix: $90)</option>
+                <option value="9">Entreprise 10 (Prix: $100)</option>
+                <option value="10">Entreprise 11 (Prix: $200)</option>
+                <option value="11">Entreprise 12 (Prix: $300)</option>
+                <option value="12">Entreprise 13 (Prix: $400)</option>
+                <option value="13">Entreprise 14 (Prix: $500)</option>
+                <option value="14">Entreprise 15 (Prix: $600)</option>
+                <option value="15">Entreprise 16 (Prix: $700)</option>
+                <option value="16">Entreprise 17 (Prix: $800)</option>
+                <option value="17">Entreprise 18 (Prix: $900)</option>
+                <option value="18">Entreprise 19 (Prix: $1000)</option>
+            </select>
+        </div>
+        <div id="balance">Balance: $1000</div>
+        <div id="stock-price">Prix de l'action: $10</div>
+        <input type="number" id="quantity" placeholder="Quantité" min="1">
+        <button onclick="buyStock()">Acheter</button>
+        <button onclick="sellStock()">Vendre</button>
+        <div id="portfolio">Portfolio: 0 actions</div>
+        <div id="message"></div>
+        <canvas id="priceChart" width="400" height="200"></canvas>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Voulez-vous vraiment supprimer les fichiers locaux du navigateur ?</p>
+            <button id="clearStorageBtn">Supprimer les fichiers locaux</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
